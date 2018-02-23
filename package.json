@@ -1,9 +1,12 @@
 {
-  "name": "hackcopter-boilerplate",
+  "name": "voicecopter",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "license": "MIT",
   "dependencies": {
-    "pdrone": "1.1.3"
+    "clap-detector": "^0.4.1",
+    "express": "^4.15.2",
+    "pdrone": "1.1.3",
+    "socket.io": "^2.0.4"
   }
 }
