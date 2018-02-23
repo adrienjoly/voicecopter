@@ -15,6 +15,17 @@ http.listen(3000, function () {
   console.log('open http://localhost:3000/');
 });
 
+// Clap-based drone contol
+
+var clapDetector = require('clap-detector');
+clapDetector.start();
+clapDetector.onClap(function(history) {
+  console.log('CLAP => flip left');
+  drone.flip({direction: 'left'});
+});
+
+// Voice-based drone control
+
 const defaultWaitTime = 100;
 
 drone.on('connected', async function () {
