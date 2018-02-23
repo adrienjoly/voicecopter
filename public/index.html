@@ -1,13 +1,30 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Socket.IO test</title>
-  </head>
-  <body>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io();
-      setInterval(() => socket.emit('message', 'eee'), 2000);
-    </script>
-  </body>
+
+<head>
+  <title>Pitch Detector</title>
+  <link href='http://fonts.googleapis.com/css?family=Alike' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <script src="/socket.io/socket.io.js"></script>
+  <button id="record" onclick="s.start()">Record</button>
+
+  <script>
+    const s = new webkitSpeechRecognition();
+
+    s.onaudiostart = s.onaudioend = () => {
+      document.querySelector('#record').classList.toggle('recording');
+    };
+
+    s.onresult = (c) => {
+      const transcript = c.results[0][0].transcript;
+      console.log('transcript', transcript);
+      socket.emit('message', transcript);
+    }
+
+    var socket = io();
+    // setInterval(() => socket.emit('message', 'eee'), 2000);
+  </script>
+</body>
 </html>
