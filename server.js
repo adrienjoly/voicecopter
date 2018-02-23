@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 // Socket.io server
 
-=======
->>>>>>> fire! :fire:
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
@@ -18,11 +15,7 @@ http.listen(3000, function () {
   console.log('open http://localhost:3000/');
 });
 
-<<<<<<< HEAD
-// Drone control
-=======
 const defaultWaitTime = 100;
->>>>>>> fire! :fire:
 
 drone.on('connected', async function () {
   console.log('drone connected');
@@ -38,12 +31,6 @@ drone.on('connected', async function () {
             console.log('received take off command');;
             drone.takeOff();
             break;
-<<<<<<< HEAD
-          case 'land':
-            console.log('land');
-            drone.land();
-            break;
-=======
           case 'stop b****':
             console.log('land');
             drone.land();
@@ -60,7 +47,6 @@ drone.on('connected', async function () {
           case 'fire':
             drone.fire();
             break;
->>>>>>> fire! :fire:
         }
       // });
       // drone.on('connected', async function () {
@@ -72,8 +58,4 @@ drone.on('connected', async function () {
       // });
     });
   });
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> fire! :fire:
