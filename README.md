@@ -1,7 +1,7 @@
 # Voice Copter
 
 This is a Node.js program to control a Parrot Mambo drone.
-Developed on Feb 23rd, 2018, by Nicolas Baissas, Gianluca Bargelli, Aaron Stillwell and Adrien Joly during [Algolia's 2018 Offsite Drone Hackathon](drone-hackathon.md)).
+Developed on Feb 23rd, 2018, by Nicolas Baissas, Gianluca Bargelli, Aaron Stillwell and Adrien Joly during [HackCopter '18](https://github.com/algolia/hackcopter) (drone hackathon organized during Algolia's offsite).
 
 ## Demo
 
